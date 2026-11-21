@@ -35,3 +35,55 @@
   border-color: #ffda9c !important;
   color: #153b5e !important;
 }
+
+
+/* v21 — identidade visual unificada dos botoes de acao do portal */
+.portal-page {
+  --portal-btn-bg: #ffca71;
+  --portal-btn-hover: #ffda9c;
+  --portal-btn-text: #153b5e;
+}
+.portal-page .hero-actions .primary-cta,
+.portal-page .hero-actions .secondary-cta,
+.portal-page .topbar-links a[href="https://deest.ufop.br/"],
+.portal-page .institutional-line > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background: var(--portal-btn-bg) !important;
+  color: var(--portal-btn-text) !important;
+  border: 1px solid var(--portal-btn-bg) !important;
+  border-radius: 12px;
+  padding: 12px 18px;
+  min-height: 44px;
+  font-weight: 750;
+  text-decoration: none;
+  opacity: 1;
+  box-shadow: 0 5px 14px rgba(8,30,51,.15);
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.portal-page .hero-actions .primary-cta:hover,
+.portal-page .hero-actions .secondary-cta:hover,
+.portal-page .topbar-links a[href="https://deest.ufop.br/"]:hover,
+.portal-page .institutional-line > a:hover {
+  background: var(--portal-btn-hover) !important;
+  border-color: var(--portal-btn-hover) !important;
+  color: var(--portal-btn-text) !important;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.portal-page .hero-actions a:focus-visible,
+.portal-page .topbar-links a[href="https://deest.ufop.br/"]:focus-visible,
+.portal-page .institutional-line > a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+@media (max-width: 720px) {
+  .portal-page .institutional-line > a {white-space: normal; text-align: center;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .portal-page .hero-actions a,
+  .portal-page .topbar-links a[href="https://deest.ufop.br/"],
+  .portal-page .institutional-line > a {transition: none;}
+}
