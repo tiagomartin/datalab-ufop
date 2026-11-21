@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📈 Desafio da Previsão | DataLab UFOP</title><link rel="stylesheet" href="../../assets/style.css"><link rel="stylesheet" href="game.css"></head>
+<body><header><nav class="datalab-home-nav"><a class="datalab-home-link" href="../../index.html">⌂ Voltar à página inicial</a></nav><h1>📈 Você prevê melhor que os modelos?</h1><p>Encontre padrões, faça previsões e descubra como a Estatística ajuda a antecipar o futuro.</p></header>
+<main>
+<section class="card"><div class="topline"><div><h2>Escolha seu desafio</h2><p class="muted">Os dados têm um padrão, mas também uma parte imprevisível.</p></div><div class="round-chip" id="roundBadge">Rodada livre</div></div>
+<div class="level-row" role="group" aria-label="Dificuldade"><button class="level active" data-level="trend">📈 Tendência</button><button class="level alt" data-level="season">🔁 Sazonalidade</button><button class="level alt" data-level="mixed">🎲 Incerteza</button></div>
+<div id="scenarioHelp" class="scenario-help"></div></section>
+<div class="cols"><section class="card"><h2>1. Faça sua previsão</h2><p>Observe os 12 períodos. <strong>Clique ou arraste no gráfico</strong> sobre a linha do período 13, ou ajuste o controle abaixo.</p>
+<canvas class="chart interactive-chart" id="series" role="img" aria-label="Série temporal com eixos numéricos, 12 observações e previsão ajustável no período 13"></canvas>
+<div class="forecast-control"><label for="forecast">Sua previsão para o período 13</label><input id="forecast" type="number" step="0.1" inputmode="decimal"></div>
+<input id="forecastRange" type="range" aria-label="Ajustar previsão" step="0.1">
+<div id="intervalControls" class="interval-controls" hidden><h3>Qual faixa você considera plausível?</h3><div class="interval-grid"><label>Limite inferior <input id="lower" type="number" step="0.1"></label><label>Limite superior <input id="upper" type="number" step="0.1"></label></div><p class="muted small">Intervalos muito largos recebem penalização. A faixa é uma aposta pessoal, não um intervalo de confiança calculado.</p></div>
+<div class="action-row"><button id="check">🔍 Revelar e comparar</button><button id="next" class="alt">Nova série</button></div>
+<div id="answer" class="notice" role="status" aria-live="polite">Escolha sua previsão. O valor real está oculto.</div></section>
+<section class="card"><h2>2. Quem previu melhor?</h2><p class="muted">Os modelos usam somente os 12 valores disponíveis. Veja as previsões antes da revelação e compare os erros depois.</p>
+<div id="modelPredictions" class="model-list"></div><div id="comparison" aria-live="polite"></div><hr><h3>O que aprendemos?</h3><p id="lesson" class="muted">Prever é usar padrões para reduzir a incerteza, não acertar sempre.</p></section></div>
+<section class="card"><div class="topline"><div><h2>🏆 Campeonato de previsões</h2><p class="muted">Cinco rodadas com padrões diferentes. Compita com três modelos estatísticos.</p></div><button id="startChamp">Iniciar campeonato</button></div>
+<div class="stats" id="champStats"><span class="stat">Campeonato não iniciado</span></div><div id="champHistory"></div><div id="champEnd" class="notice" hidden></div></section>
+<div id="status" class="notice" role="status" aria-live="polite">Pronto para começar.</div>
+</main><footer>DataLab UFOP • Aplicação estática • HTML, CSS e JavaScript • Sem servidor R</footer><script src="../../assets/common.js"></script><script src="app.js"></script></body></html>
