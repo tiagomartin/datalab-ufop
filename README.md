@@ -1,2 +1,2 @@
-# DataLab UFOP — Versão Web Estática
+# DataLab UFOP - Versão Web
 
