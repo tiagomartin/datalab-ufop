@@ -15,3 +15,6 @@
 .datalab-home-link:hover { background:rgba(255,255,255,.28); }
 .datalab-home-link:focus-visible { outline:3px solid #ffc56d; outline-offset:3px; }
 @media(max-width:600px) { .datalab-home-link { padding:10px 12px; } }
+
+/* Laboratório e Detetive da Moeda */
+.coin-mode{display:flex;flex-wrap:wrap;gap:16px;margin:14px 0}.coin-mode label{cursor:pointer}.detective-card{margin-top:18px}.detective-card .controls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#coin-prob{accent-color:#1674a5}#det-verdict{min-height:44px}
