@@ -20,3 +20,18 @@
 .about-mark-ufop img{display:block;width:auto;max-width:100%;height:240px;object-fit:contain}
 .about-mark-ufop span{text-align:center;line-height:1.4;font-size:12px}
 @media(max-width:720px){.about-mark-ufop img{height:190px}}
+
+
+/* DataLab UFOP — padronização dos dois botões Conheça nosso curso */
+.topbar-links a[href="https://deest.ufop.br/"],
+.hero-actions a[href="https://deest.ufop.br/"] {
+  background: #ffca71 !important;
+  color: #153b5e !important;
+  border-color: #ffca71 !important;
+}
+.topbar-links a[href="https://deest.ufop.br/"]:hover,
+.hero-actions a[href="https://deest.ufop.br/"]:hover {
+  background: #ffda9c !important;
+  border-color: #ffda9c !important;
+  color: #153b5e !important;
+}
